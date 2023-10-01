@@ -1,0 +1,182 @@
+
+/* header, footer, body laman */
+*{
+    font-family:'Comic Sans MS', cursive;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #FFF3E2;
+}
+
+header{
+    background-color: #FFE5CA;
+    color:#E74646;
+    font-size: 50px;
+    margin-bottom:0px;
+    border-bottom: solid 5px #E74646;
+    border-top: solid 5px #E74646;
+    padding-bottom: 30px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding-left: 5%;
+}
+
+.alert{
+    font-size: 10px !important;
+    color: #E74646;
+}
+
+footer{
+    background-color: #98D8AA;
+    color: white;
+    width: 100%;
+    font-size: x-large;
+}
+header{
+    height: 8vh;
+}
+footer{
+    height: 50px;
+    border-top: 2px dashed black;
+    text-align: center;
+    
+}
+body{
+    background-image: url(backgroundIMG.webp);
+}
+
+
+/* body rincian kegiatan */
+.bodyEvent{
+    margin-left: 5%;
+    margin-right: 25%;
+    width: 70%;
+}
+.showTable{
+    font-size: 30px;
+   
+    background-color: #FFE5CA;
+    width: 100%;
+}
+thead{
+    background-color: #FA9884;
+    color: white;
+    
+  justify-content: space-between;
+  align-items: center;
+    vertical-align:middle;
+    
+}
+
+/* tombol */
+.tombol{
+    background-color: #FA9884;
+    border: 1px solid #E74646;
+    text-decoration: underline;
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+    left: 5vw;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.tombol:hover{
+    background-color: #E74646;
+}
+
+.tombolDalam{
+    float: right;
+    background-color: #E74646;
+    border: 1px solid ;
+    text-decoration: underline;
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+    left: 5vw;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;}
+    
+
+.tombolDalam:hover{
+    background-color: #d61313;
+}
+
+/* css untuk form */
+#formBackground{
+    display: none; /* disembunyikan by default */
+    z-index: 15;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+#formUpdateKegiatan{
+    display: none;
+    z-index: 20;
+    padding: 20px;
+    padding-top: 0;
+    background-color: #e8f4fa;
+    width: 30%;
+    border-radius: 5px;
+    position: fixed;
+    top: 8%;
+    left: 35%;
+}
+
+#confirmDelete{
+    display: none;
+    z-index: 20;
+    padding: 20px;
+    padding-top: 0;
+    background-color: #e8f4fa;
+    width: 30%;
+    border-radius: 5px;
+    position: fixed;
+    top: 25%;
+    left: 35%;
+}
+
+    #formUpdateKegiatan > td{
+        font-size: 10px !important;
+    }
+
+a:link{
+    color: white;
+}
+a:visited{
+    color: white;
+}
+a{
+    text-decoration: none;
+}
+.img-size{
+    width: 200px;
+    height: auto;
+}
+
+#deleteButton{
+    margin-right: 80px;
+}
+
+td, th{
+    padding: 10px;
+}
+
+#theader{
+    float: left;
+}

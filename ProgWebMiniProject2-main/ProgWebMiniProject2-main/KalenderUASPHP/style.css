@@ -1,0 +1,202 @@
+body{
+    /* margin-top: 50px; */
+    display: flex;
+    justify-content: center;
+    /* pakai flex sehingga kalender bisa di center */
+}
+
+#container{
+    width: 770px;
+    border: 1px solid sienna;
+}
+
+/* css untuk kolom hari */
+#weekdays {
+    display: flex; /* sehingga tiap kolom hari sama rata */
+    width: 100%;
+    font-weight: bold;
+    /* background-color: skyblue; */
+}
+
+#weekdays div{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border: 1px dashed black; 
+    background-color: coral;
+}
+/* css untuk kolom hari - end */
+
+/* css untuk header kalender */
+#header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 32px;
+}
+
+button, #saveButton{
+    border:none;
+    background-color: lightslategrey;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    width: 75px;
+    height: 30px;
+    color: white;
+}
+
+button:hover{
+    color: gold;
+}
+
+#currentMonth{
+    font-family: sans-serif;
+    font-weight: bold;
+    color: tomato;
+}
+/* css untuk header kalender - end*/
+
+/* css untuk tanggal kalender */
+#kalender{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* margin: auto; */
+}
+
+.day a{
+    color: white;
+    text-decoration: none;
+}
+
+.day a:hover{
+    color: crimson!important; 
+    text-decoration: underline;
+}
+
+.day a:visited{
+    color: white;
+    text-decoration: none;
+}
+
+.day{
+    width: 110px;
+    height: 110px;
+    cursor: pointer;
+    box-sizing: border-box; /* sehingga penambahan padding dan border tidak mengubah size tiap kotak kalender */
+    padding: 10px;
+    border: 1px dashed black;
+    /* display: flex;
+    flex-flow: column nowrap; */
+    /* flex-direction: column;
+    flex-wrap: wrap; */
+    overflow: hidden;
+    /* justify-content: space-between; */
+}
+
+.day:hover{
+    background-color: salmon;
+    box-shadow: 0px 0px 5px sandybrown;
+    overflow-y: visible;
+}
+
+.alert{
+    font-size: 10px !important;
+    color: #E74646;
+}
+
+.day::-webkit-scrollbar{
+    width: 5px;
+}
+
+.day::-webkit-scrollbar-thumb{
+    background-color: black;
+    border-radius: 10px;
+}
+
+.day::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px gray; 
+    border-radius: 10px;
+  }
+
+.day.empty{
+    cursor: default;
+    background-color: white;
+    border: none;
+    box-shadow: none;
+}
+
+.day + #currentDay {
+    background-color:rgb(255, 182, 174);
+  }
+
+.event {
+    font-size: 10px;
+    padding: 3px;
+    color: white;
+    border-radius: 5px;
+    max-height: 55px;
+    width: 100%;
+    overflow: hidden;
+    font-weight: bold;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+.event.biasa{
+    background-color: #2a9d8f;
+}
+.event.sedang{
+    background-color: #e85d04;
+}
+.event.penting{
+    background-color: #e63946;
+}
+/* css untuk tanggal kalender - end */
+
+/* css untuk form */
+#formBackground{
+    display: none; /* disembunyikan by default */
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100vw;
+    height: 120vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#formTambahKegiatan, #formPreview{
+    display: none;
+    z-index: 20;
+    padding: 20px;
+    padding-top: 0;
+    background-color: #e8f4fa;
+    width: 30%;
+    border-radius: 5px;
+    position: absolute;
+    top: 100px;
+    left: 35%;
+}
+/* tambah untuk form */
+#namaKegiatan{ 
+    width: 100%;
+}
+/* css untuk form - end */
+#preNamaKegiatan{
+    margin-bottom: -10px;
+}
+#preTable{
+    margin-bottom: 5px;
+}
+
+#multipleKegiatan{
+    background-color: rgb(106, 129, 152);
+    margin-top: 5px;
+    width :fit-content;
+    text-decoration: underline;
+}
+
+#preGambar{
+    max-width: 100%;
+}
